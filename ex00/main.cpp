@@ -22,19 +22,29 @@ int main(int argc, char** argv)
 
 		///TODO: parsing code here
 
+		
 		BitcoinExchange dbase;
 		///
 		{
 			std::string	key;
-			float 		value;
-			char 		*buff1;
-			char 		*buff2;
+			// float 		value;
+			char	*buff1 = new char[80];
+			char	*buff2 = NULL;
 			// for (std::map<std::string, float>::iterator it = dbase.mp.begin(); it != dbase.mp.end(); ++it)
-			for (size_t i = 0; i < std::count(std::istreambuf_iterator<char>(inpt),std::istreambuf_iterator<char>(), '\n'); i++)
+			long long max = std::count(std::istreambuf_iterator<char>(inpt),std::istreambuf_iterator<char>(), '\n');
+			inpt.close();
+			inpt.open(argv[1], std::ios_base::in);
+			
+			for (long long i = 0; i < max; i++)
 			{
 
-				inpt.getline(buff1, '|');
-				inpt.getline(buff2, '\n');
+				
+				inpt.getline(buff1, static_cast<unsigned char>(-1), ',');
+				///TODO: ete | chka sega talis
+				std::cout << buff1 << "Hi!\n";
+				// std::cout << "Hi!\n";
+				inpt.getline(buff2, static_cast<unsigned char>(-1),'\n');
+				std::cout << buff2 << "Hi!\n";
 				
 				dbase.mp.insert(std::pair<std::string, float>(static_cast<std::string>(buff1), \
 				static_cast<std::string>(buff2).find_first_of('.') != std::string::npos ? \

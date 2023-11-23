@@ -3,6 +3,7 @@
 #include <iostream>
 #include <map>
 #include <fstream>
+#include <algorithm>
 
 class BitcoinExchange
 {
