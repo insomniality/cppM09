@@ -18,9 +18,12 @@ int main(int argc, char** argv)
 		inpt.open(argv[1], std::ios_base::in);
 		// strm.is_open();
 
-		//////TODO: vrode ban chi lini ete class ch haytararem u tupo map@ ogtagortsem che?
+		///TODO: vrode ban chi lini ete class ch haytararem u tupo map@ ogtagortsem che?
+
+		///TODO: parsing code here
 
 		BitcoinExchange dbase;
+		///
 		{
 			std::string	key;
 			float 		value;
@@ -30,13 +33,18 @@ int main(int argc, char** argv)
 			for (size_t i = 0; i < std::count(std::istreambuf_iterator<char>(inpt),std::istreambuf_iterator<char>(), '\n'); i++)
 			{
 
-				inpt.getline(buff1, ',');
+				inpt.getline(buff1, '|');
 				inpt.getline(buff2, '\n');
 				
 				dbase.mp.insert(std::pair<std::string, float>(static_cast<std::string>(buff1), \
 				static_cast<std::string>(buff2).find_first_of('.') != std::string::npos ? \
 				atoi(buff2) : static_cast<float>(atof(buff2))));
-			}	
+			}
+		}
+		
+		for (std::map<std::string, float>::iterator it = dbase.mp.begin(); it != dbase.mp.end(); ++it)
+		{
+
 		}
 
 		inpt.close();
