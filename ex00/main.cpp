@@ -34,7 +34,7 @@ int main(int argc, char** argv)
 				inpt.getline(buff2, '\n');
 				
 				dbase.mp.insert(std::pair<std::string, float>(static_cast<std::string>(buff1), \
-				static_cast<std::string>(buff2).find_first_of("") != std::string::npos ? \
+				static_cast<std::string>(buff2).find_first_of('.') != std::string::npos ? \
 				atoi(buff2) : static_cast<float>(atof(buff2))));
 			}	
 		}
