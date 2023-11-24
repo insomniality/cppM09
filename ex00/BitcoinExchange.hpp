@@ -4,6 +4,8 @@
 #include <map>
 #include <fstream>
 #include <algorithm>
+#include <string>
+#include <cstdlib>
 
 class BitcoinExchange
 {
