@@ -2,9 +2,9 @@ SRCS	=	$(shell find . -name "*.cpp")
 
 OBJS	=	${SRCS:.cpp=.o}
 
-CXXFLAGS = -std=c++98 -Wall -Wextra -Werror #-fsanitize=address# defalt bana cxxflags-@
+CXXFLAGS = -std=c++98 -Wall -Wextra #-Werror #-fsanitize=address# defalt bana cxxflags-@
 
-NAME	=	btc
+NAME	=	PmergeMe
 
 all: $(NAME)
 

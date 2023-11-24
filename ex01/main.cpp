@@ -7,7 +7,6 @@ int main(int argc, char **argv)
 		if (argc != 2)
 			throw (std::runtime_error("Wrong input"));
 		RPN a(argv[1]);
-		
 	}
 	catch(const std::exception& e)
 	{

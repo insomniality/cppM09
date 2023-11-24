@@ -64,7 +64,7 @@ void RPN::motor(std::string str)
 
 RPN::RPN()
 {
-
+	motor("12+");
 }
 
 RPN::RPN(std::string str)
