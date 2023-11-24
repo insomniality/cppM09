@@ -189,13 +189,14 @@ void BitcoinExchange::check_arg(const std::string& old_str)
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange& obj)
 {
-	(void)obj;
+	database = obj.database;
 }
 
 BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& obj)
 {
 	if (this == &obj)
 		return(*this);
+	database = obj.database;
 	return(*this);
 }
 
