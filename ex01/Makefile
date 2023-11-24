@@ -4,7 +4,7 @@ OBJS	=	${SRCS:.cpp=.o}
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror #-fsanitize=address# defalt bana cxxflags-@
 
-NAME	=	btc
+NAME	=	RPN
 
 all: $(NAME)
 
